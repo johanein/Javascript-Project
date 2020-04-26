@@ -1,0 +1,26 @@
+{
+  "name": "vanila",
+  "version": "1.0.0",
+  "description": "vanila JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development --entry ./src/js/app.js --output ./dist/bundle.js",
+    "build:prod":"webpack --mode development --entry ./src/js/app.js --output ./dist/bundle.js -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanein/Javascript-Project.git"
+  },
+  "keywords": [],
+  "author": "Albert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johanein/Javascript-Project/issues"
+  },
+  "homepage": "https://github.com/johanein/Javascript-Project#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

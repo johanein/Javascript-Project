@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _domLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domLoader */ \"./src/js/domLoader.js\");\n\n\nlet buttonClicked = false\n\n_domLoader__WEBPACK_IMPORTED_MODULE_0__[\"buttonElement\"].addEventListener(\"click\",() => {\n    buttonClicked = !buttonClicked     \n    if(buttonClicked){\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.display = \"block\"\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.color = \"red\"\n    }else{\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.color = \"black\"\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.display = \"none\"\n    }\n}\n)\n\n\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _domLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domLoader */ \"./src/js/domLoader.js\");\n\n\nlet buttonClicked = true\n\n_domLoader__WEBPACK_IMPORTED_MODULE_0__[\"buttonElement\"].addEventListener(\"click\",() => {\n    buttonClicked = !buttonClicked     \n    if(buttonClicked){\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.display = \"block\"\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.color = \"red\"\n    }else{\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.color = \"black\"\n        _domLoader__WEBPACK_IMPORTED_MODULE_0__[\"pElement\"].style.display = \"none\"\n    }\n}\n)\n\n\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 

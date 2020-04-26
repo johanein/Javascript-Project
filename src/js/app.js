@@ -4,7 +4,7 @@ import {
     buttonElement
 } from './domLoader'
 
-let buttonClicked = false
+let buttonClicked = true
 
 buttonElement.addEventListener("click",() => {
     buttonClicked = !buttonClicked     

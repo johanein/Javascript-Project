@@ -11,9 +11,11 @@ buttonElement.addEventListener("click",() => {
     if(buttonClicked){
         pElement.style.display = "block"
         pElement.style.color = "red"
+        h1Element.innerHTML = 'Changed'
     }else{
         pElement.style.color = "black"
         pElement.style.display = "none"
+        h1Element.innerHTML = 'undo'
     }
 }
 )

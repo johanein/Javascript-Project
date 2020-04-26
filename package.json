@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development --entry ./src/js/app.js --output ./dist/bundle.js --watch",
-    "build:prod":"webpack --mode production --entry ./src/js/app.js --output ./dist/bundle.js -p"
+    "build:prod": "webpack --mode production --entry ./src/js/app.js --output ./dist/bundle.js -p",
+    "start":"webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js "
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/johanein/Javascript-Project#readme",
   "devDependencies": {
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

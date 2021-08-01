@@ -41,7 +41,7 @@ const getValuePromise2 = new Promise((resolve, reject) => {
 const allPromises = Promise.all([
   getValuePromise,
   getValuePromise1,
-  // getValuePromise2,
+  getValuePromise2,
 ]);
 allPromises
   .then((params) => {
@@ -78,7 +78,7 @@ PromisesAny.then((params) => {
 });
 
 // promise race
-const PromisesRace = Promise.any([
+const PromisesRace = Promise.race([
   getValuePromise,
   getValuePromise1,
   getValuePromise2,

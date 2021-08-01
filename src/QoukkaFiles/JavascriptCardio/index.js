@@ -58,10 +58,46 @@ const functions = {
 
     return returnArray;
   },
+  longestWord: (stn) => {
+    // create filtered array
+    const wordArray = stn.match(/[a-z0-9]+/gi);
+    // sort based on lenth
+    const sortedArray = wordArray.sort((a, b) => b.length - a.length);
+    // find longest word array
+    const longestWordArray = sortedArray.filter(
+      (item) => item.length >= sortedArray[0].length
+    );
+    if (longestWordArray.length === 1) return longestWordArray[0];
+    return longestWordArray;
+  },
+  chunkedArray: (arr, length) => {
+    const chunkedArray = [];
+    let i = 0;
+    while (i < arr.length) {
+      chunkedArray.push(arr.slice(i, i + length));
+      i += length;
+    }
+    return chunkedArray;
+  },
+  chunkedArray1: (arr, length) => {
+    const chunkedArray = [];
+    arr.forEach((val) => {
+      const last = chunkedArray[chunkedArray.length - 1];
+      if (!last || last.length === length) {
+        chunkedArray.push([val]);
+      } else {
+        last.push(val);
+      }
+    });
+    return chunkedArray;
+  },
 };
 
 // console.log(functions.capitalizeLetter("i love javaScript"));
 // console.log(functions.capitalizeLetter1("i love javaScript"));
 // console.log(functions.capitalizeLetter2("i love javaScript"));
 // console.log(functions.maxCharacter("javaScripttttt"));
-console.log(functions.fizzBuzz());
+// console.log(functions.fizzBuzz());
+// console.log(functions.longestWord("Hellooo, i'm albert"));
+// console.log(functions.chunkedArray([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(functions.chunkedArray1([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));

@@ -91,6 +91,10 @@ const functions = {
     });
     return chunkedArray;
   },
+  flattenArraySimple: (arrays) => arrays.flat(Infinity),
+  flattenArray: (arrays) => [].concat(...arrays),
+  flattenArray1: (arrays) =>
+    arrays.reduce((acc, item) => [...acc, ...item], []),
 };
 
 // console.log(functions.capitalizeLetter("i love javaScript"));
@@ -100,4 +104,7 @@ const functions = {
 // console.log(functions.fizzBuzz());
 // console.log(functions.longestWord("Hellooo, i'm albert"));
 // console.log(functions.chunkedArray([1, 2, 3, 4, 5, 6, 7], 3));
-console.log(functions.chunkedArray1([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));
+// console.log(functions.chunkedArray1([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));
+// console.log(functions.flattenArray([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+// console.log(functions.flattenArray1([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+console.log(functions.flattenArraySimple([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));

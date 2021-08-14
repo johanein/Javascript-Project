@@ -107,8 +107,87 @@ const functions = {
     }),
   vowelToUpperCase: (str) =>
     str.replace(/a|e|i|o|u/gi, (vowel) => vowel.toUpperCase()),
+  addAll: (...arr) => arr.reduce((acc, item) => acc + item),
+  checkForPrime: (num) => {
+    for (let index = 2; index < num; index++) {
+      if (num % index === 0) {
+        return false;
+      }
+    }
+    return true;
+  },
+  sumOfAllPrime: (num) => {
+    let total = 0;
+    for (let index = 2; index < num; index++) {
+      if (functions.checkForPrime(index)) {
+        total += index;
+      }
+    }
+    return total;
+  },
+  seekAndDestroy: (arr, ...restArgs) => {
+    return arr.filter((item) => restArgs.indexOf(item) === -1);
+  },
+  seekAndDestroy1: (arr, ...restArgs) => {
+    return arr.filter((item) => !restArgs.includes(item));
+  },
+  sortByHeight: (arr) => {
+    const { indexArray, valueArray } = arr.reduce(
+      (acc, value, index) => {
+        if (value === -1) {
+          acc.indexArray = [...acc.indexArray, index];
+        } else {
+          acc.valueArray = [...acc.valueArray, value].sort((a, b) => a - b);
+        }
+        return acc;
+      },
+      { indexArray: [], valueArray: [] }
+    );
+    valueArray.forEach((value, index) =>
+      valueArray.splice(indexArray[index], 0, -1)
+    );
+    return valueArray;
+  },
+  missingLetters: (str) => {
+    let charCode = str.charCodeAt(0);
+    let missingChar;
+    str.split("").forEach((c) => {
+      if (c.charCodeAt() === charCode) {
+        ++charCode;
+      } else {
+        missingChar = String.fromCharCode(charCode);
+      }
+    });
+    return missingChar;
+  },
+  evenOddSum: (arr) => {
+    return arr.reduce(
+      (acc, item) => {
+        if (item % 2 === 0) {
+          acc[0] += item;
+        } else {
+          acc[1] += item;
+        }
+        return acc;
+      },
+      [0, 0]
+    );
+  },
 };
 
+function argumentsInJavascript(...restArgs) {
+  return { arguments, restArgs, arrayFromArguments: Array.from(arguments) };
+}
+console.log(functions.evenOddSum([1, 2, 3, 4, 5, 6]));
+// missingLetters ex: 'abcdefghi', 'abce'
+// console.log(functions.missingLetters("abcefghi"));
+// sort by height ex: [-1,150,190,170,-1,-1,160,180]
+// console.log(functions.sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+// console.log(functions.seekAndDestroy1([2, 3, 4, 6, 6, "hello"], 2, 6));
+// console.log(functions.seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
+// console.log(argumentsInJavascript([2, 3, 4, 6, 6, "hello"], 2, 6));
+// console.log(functions.sumOfAllPrime(10));
+// console.log(functions.addAll(1, 2, 3, 4));
 // console.log(functions.capitalizeLetter("i love javaScript"));
 // console.log(functions.capitalizeLetter1("i love javaScript"));
 // console.log(functions.capitalizeLetter2("i love javaScript"));
@@ -121,9 +200,10 @@ const functions = {
 // console.log(functions.flattenArray([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
 // console.log(functions.flattenArray1([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
 // console.log(functions.flattenArray2([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
-// console.log(functions.formatString("Good day"));
 // ex: 'dormitory' and 'dirty room', elbow and below
-// console.log(functions.isAnagram("elbow", "below"));
+// console.log(functions.formatString("Good day"));
 //letter changes. ex: 'hello there' === 'Ifmmp Uifof'
-console.log(functions.letterChanges("hello There"));
-console.log(functions.vowelToUpperCase("hello There"));
+// console.log(functions.isAnagram("elbow", "below"));
+// changes each and every letters into the next alphabet
+// console.log(functions.letterChanges("hello There"));
+// console.log(functions.vowelToUpperCase("hello There"));

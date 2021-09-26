@@ -180,30 +180,30 @@ function argumentsInJavascript(...restArgs) {
 }
 console.log(functions.evenOddSum([1, 2, 3, 4, 5, 6]));
 // missingLetters ex: 'abcdefghi', 'abce'
-// console.log(functions.missingLetters("abcefghi"));
+console.log(functions.missingLetters("abcefghi"));
 // sort by height ex: [-1,150,190,170,-1,-1,160,180]
-// console.log(functions.sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
-// console.log(functions.seekAndDestroy1([2, 3, 4, 6, 6, "hello"], 2, 6));
-// console.log(functions.seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
-// console.log(argumentsInJavascript([2, 3, 4, 6, 6, "hello"], 2, 6));
-// console.log(functions.sumOfAllPrime(10));
-// console.log(functions.addAll(1, 2, 3, 4));
-// console.log(functions.capitalizeLetter("i love javaScript"));
-// console.log(functions.capitalizeLetter1("i love javaScript"));
-// console.log(functions.capitalizeLetter2("i love javaScript"));
-// console.log(functions.maxCharacter("javaScripttttt"));
-// console.log(functions.fizzBuzz());
-// console.log(functions.longestWord("Hellooo, i'm albert"));
-// console.log(functions.chunkedArray([1, 2, 3, 4, 5, 6, 7], 3));
-// console.log(functions.chunkedArray1([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));
-// console.log(functions.flattenArraySimple([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
-// console.log(functions.flattenArray([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
-// console.log(functions.flattenArray1([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
-// console.log(functions.flattenArray2([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+console.log(functions.sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+console.log(functions.seekAndDestroy1([2, 3, 4, 6, 6, "hello"], 2, 6));
+console.log(functions.seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
+console.log(argumentsInJavascript([2, 3, 4, 6, 6, "hello"], 2, 6));
+console.log(functions.sumOfAllPrime(10));
+console.log(functions.addAll(1, 2, 3, 4));
+console.log(functions.capitalizeLetter("i love javaScript"));
+console.log(functions.capitalizeLetter1("i love javaScript"));
+console.log(functions.capitalizeLetter2("i love javaScript"));
+console.log(functions.maxCharacter("javaScripttttt"));
+console.log(functions.fizzBuzz());
+console.log(functions.longestWord("Hellooo, i'm albert"));
+console.log(functions.chunkedArray([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(functions.chunkedArray1([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));
+console.log(functions.flattenArraySimple([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+console.log(functions.flattenArray([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+console.log(functions.flattenArray1([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
+console.log(functions.flattenArray2([[1, 2, 3, 4], [5, 6, 7, 8], [9]], 2));
 // ex: 'dormitory' and 'dirty room', elbow and below
-// console.log(functions.formatString("Good day"));
-//letter changes. ex: 'hello there' === 'Ifmmp Uifof'
-// console.log(functions.isAnagram("elbow", "below"));
+console.log(functions.formatString("Good day"));
+// letter changes. ex: 'hello there' === 'Ifmmp Uifof'
+console.log(functions.isAnagram("elbow", "below"));
 // changes each and every letters into the next alphabet
-// console.log(functions.letterChanges("hello There"));
-// console.log(functions.vowelToUpperCase("hello There"));
+console.log(functions.letterChanges("hello There"));
+console.log(functions.vowelToUpperCase("hello There"));

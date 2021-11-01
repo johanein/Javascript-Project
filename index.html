@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <style>
+      div {
+        min-width: 100px;
+        min-height: 100px;
+        padding: 30px;
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <h1>A new beginning</h1>
@@ -14,8 +22,29 @@
       you can just type and that's it !!!<br />
       And it seems it is working
     </p>
+    <div id="grandParent">
+      <div id="parent">
+        <div id="child"></div>
+      </div>
+    </div>
+    <div>
+      <li id="categories">
+        <ul data-dataid="someId" id="laptops">
+          laptop
+        </ul>
+        <ul id="cameras">
+          camera
+        </ul>
+        <ul id="shoes">
+          shoe
+        </ul>
+      </li>
+    </div>
     <!-- <script src="js/domLoader.js" > </script> -->
     <script src="dist/bundle.js"></script>
-    <script src="src/QoukkaFiles/asyncAwait.js"></script>
+    <!-- <script src="src/QoukkaFiles/asyncAwait.js"></script> -->
+    <!-- <script src="src/QoukkaFiles/polyfillUsingBind.js"></script> -->
+    <script src="src/QoukkaFiles/eventBubblingAndCatching.js"></script>
+    <script src="src/QoukkaFiles/eventDelegation.js"></script>
   </body>
 </html>
